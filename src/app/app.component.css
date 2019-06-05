@@ -1,0 +1,14 @@
+*{
+    margin-left: 30px;
+}
+h1, h2{color:navy;}
+p{font-size:13px;}
+:host {
+    font-family: Verdana;
+    color: #555;
+}
+span
+{
+    display: block;
+    margin:  10px;
+}
