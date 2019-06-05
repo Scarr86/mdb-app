@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { FormsModule }   from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,

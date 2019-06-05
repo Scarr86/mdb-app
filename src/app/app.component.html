@@ -1,153 +1,118 @@
-<!--Main Navigation-->
-
-<header>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
-    <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Opinions</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav nav-flex-icons">
-        <li class="nav-item">
-          <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"><i class="fab fa-instagram"></i></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-</header>
-
-
 
 <!--Main Navigation-->
 <main>
-    <mdb-carousel class=" w-50  mx-auto   carousel slide carousel-fade" [animation]="'fade'">
-        <mdb-carousel-item>
-          <div class="view w-100">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
-            <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-          </div>
-          <div class="carousel-caption">
-            <h3 class="h3-responsive">Light mask</h3>
-            <p>First text</p>
-          </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="view w-100">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
-            <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
-          </div>
-          <div class="carousel-caption">
-            <h3 class="h3-responsive">Strong mask</h3>
-            <p>Secondary text</p>
-          </div>
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <div class="view w-100">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
-            <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
-          </div>
-          <div class="carousel-caption">
-            <h3 class="h3-responsive">Slight mask</h3>
-            <p>Third text</p>
-          </div>
-        </mdb-carousel-item>
-      </mdb-carousel>
-
-  <section class="mt-3 mb-3" >
-            <!-- Card -->
-          <mdb-card  style="width: 22rem;" >
-            <div class="card " >
-              <!-- Card img -->
-              <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-              <a>
-                <div class="mask"></div>
-              </a>
-            </div>
-            <!--Card content-->
-            <mdb-card-body>
-              <!--Title-->
-              <mdb-card-title>
-                <h4>Card Title</h4>
-              </mdb-card-title>
-          
-              <!--Text-->
-              <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </mdb-card-text>
-          
-              <a href="" mdbBtn color="primary" mdbWavesEffect>Button</a>
-            </mdb-card-body>
-          </mdb-card >
-    <!-- Card -->
-  </section>
-
-
-
-
-  <div>
-        <button mdbBtn type="button" color="primary" mdbWavesEffect>Primary</button>
-        <button mdbBtn type="button" color="default" mdbWavesEffect>Default</button>
-        <button mdbBtn type="button" color="secondary" mdbWavesEffect>Secondary</button>
-        <button mdbBtn type="button" color="success" mdbWavesEffect>Success</button>
-        <button mdbBtn type="button" color="info" mdbWavesEffect>Info</button>
-        <button mdbBtn type="button" color="warning" mdbWavesEffect>Warning</button>
-        <button mdbBtn type="button" color="danger" mdbWavesEffect>Danger</button>
+  <div class="row">
+    <div class="col-10">
+      <app-test></app-test>
     </div>
-    
-    
-    <h3>История:</h3>
-    <p>Боб работает водителем автобуса. Тем не менее, он стал чрезвычайно популярным среди жителей города. Поскольку так много пассажиров хотят сесть в его автобус, ему иногда приходится сталкиваться с проблемой нехватки места в автобусе! Он хочет, чтобы вы написали простую программу, сообщающую ему, сможет ли он вместить всех пассажиров.
-    </p> 
-    <h3>Обзор задач:</h3>
-    <span> Вы должны написать функцию, которая принимает три параметра:</span>
-    <ul>
-      <li>cap количество людей, которое может вместить автобус, кроме водителя.</li>
-      <li>on это количество людей в автобусе.</li>
-      <li>wait количество людей, ожидающих, чтобы сесть в автобус.</li>
-    </ul>
-    <span> Если места достаточно, верните 0, а если его нет, укажите количество пассажиров, которых он не может принять</span>
-    <hr>
-    
-    
-    <table>
-      <tr>
-        <td>Cap</td><td><input type="number" [(ngModel)]="cap" /></td>
-      </tr>
-      <tr>
-        <td>On</td><td>  <input type="number" [(ngModel)]="on" /></td>
-      </tr>
-      <tr>
-        <td>Wait</td><td> <input type="number" [(ngModel)]="wait" /> </td>
-      </tr>
-      <tr>
-        <td>Result:</td><td> <input type="text" [(ngModel)]="res" /> </td>
-      </tr>
+    <div class="col">
+      <h3>История:</h3>
+      <p>Боб работает водителем автобуса. Тем не менее, он стал чрезвычайно популярным среди жителей города. Поскольку так много пассажиров хотят сесть в его автобус, ему иногда приходится сталкиваться с проблемой нехватки места в автобусе! Он хочет, чтобы вы написали простую программу, сообщающую ему, сможет ли он вместить всех пассажиров.
+      </p> 
+      <h3>Обзор задач:</h3>
+      <span> Вы должны написать функцию, которая принимает три параметра:</span>
+      <ul>
+        <li>cap количество людей, которое может вместить автобус, кроме водителя.</li>
+        <li>on это количество людей в автобусе.</li>
+        <li>wait количество людей, ожидающих, чтобы сесть в автобус.</li>
+      </ul>
+      <span> Если места достаточно, верните 0, а если его нет, укажите количество пассажиров, которых он не может принять</span>
+      <hr>
       
-    </table>
-    <p> 
-      <button mdbBtn  color="primary" mdbWavesEffect  [type]="type" (click)="space($event)"  >Result</button>
-    </p>
+      
+      <table>
+        <tr>
+          <td>Cap</td><td><input type="number" [(ngModel)]="cap" /></td>
+        </tr>
+        <tr>
+          <td>On</td><td>  <input type="number" [(ngModel)]="on" /></td>
+        </tr>
+        <tr>
+          <td>Wait</td><td> <input type="number" [(ngModel)]="wait" /> </td>
+        </tr>
+        <tr>
+          <td>Result:</td><td> <input type="text" [(ngModel)]="res" /> </td>
+        </tr>
+        
+      </table>
+      <p> 
+        <button mdbBtn  color="primary" mdbWavesEffect  [type]="type" (click)="space($event)"  >Result</button>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <mdb-carousel class=" w-50  mx-auto   carousel slide carousel-fade" [animation]="'fade'">
+            <mdb-carousel-item>
+              <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+              </div>
+              <div class="carousel-caption">
+                <h3 class="h3-responsive">Light mask</h3>
+                <p>First text</p>
+              </div>
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+              <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+                <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+              </div>
+              <div class="carousel-caption">
+                <h3 class="h3-responsive">Strong mask</h3>
+                <p>Secondary text</p>
+              </div>
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+              <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+              </div>
+              <div class="carousel-caption">
+                <h3 class="h3-responsive">Slight mask</h3>
+                <p>Third text</p>
+              </div>
+            </mdb-carousel-item>
+          </mdb-carousel>
+    
+      <section class="mt-3 mb-3" >
+                <!-- Card -->
+              <mdb-card  style="width: 22rem;" >
+                <div class="card " >
+                  <!-- Card img -->
+                  <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
+                  <a>
+                    <div class="mask"></div>
+                  </a>
+                </div>
+                <!--Card content-->
+                <mdb-card-body>
+                  <!--Title-->
+                  <mdb-card-title>
+                    <h4>Card Title</h4>
+                  </mdb-card-title>
+              
+                  <!--Text-->
+                  <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </mdb-card-text>
+              
+                  <a href="" mdbBtn color="primary" mdbWavesEffect>Button</a>
+                </mdb-card-body>
+              </mdb-card >
+        <!-- Card -->
+      </section>
+      <div>
+            <button mdbBtn type="button" color="primary" mdbWavesEffect>Primary</button>
+            <button mdbBtn type="button" color="default" mdbWavesEffect>Default</button>
+            <button mdbBtn type="button" color="secondary" mdbWavesEffect>Secondary</button>
+            <button mdbBtn type="button" color="success" mdbWavesEffect>Success</button>
+            <button mdbBtn type="button" color="info" mdbWavesEffect>Info</button>
+            <button mdbBtn type="button" color="warning" mdbWavesEffect>Warning</button>
+            <button mdbBtn type="button" color="danger" mdbWavesEffect>Danger</button>
+        </div>
+
+    </div>
+  </div>
     
   </main>
