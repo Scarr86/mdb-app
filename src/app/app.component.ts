@@ -1,22 +1,24 @@
 import { Component } from '@angular/core';
+import { DataService} from './data.service';
+import { Phone } from './phone';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [DataService]
 
 })
-export class AppComponent { 
-   cap:number = 10;
-  on:number = 9;
-  wait:number = 3;
-  res:number = 0  ;
+export class AppComponent {
+  name:string = 'myname';
+  price:number = 44;
+  items: Phone[] = [];
+  constructor(private dataService: DataService){}
 
-  type:string = "button";
-
-  space($event) : void {
-      this.res = this.cap - (this.on + this.wait); 
-      console.log( this.res);
-      this.res = (this.res >= 0) ? 0 : this.res * (-1);
-      
+  addItem(name: string, price: number){
+    this.dataService.addData(name, price);
   }
+  ngOnInit(){
+    this.items = this.dataService.getData();
+  }
+  
 }

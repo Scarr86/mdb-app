@@ -7,12 +7,18 @@ import { AppComponent } from './app.component';
 import { FormsModule }   from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { TestComponent } from './test/test.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { ExampleComponent } from './example/example.component';
+import { DeployComponent } from './deploy/deploy.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
+    CarouselComponent,
+    ExampleComponent,
+    DeployComponent,
   ],
   imports: [
     BrowserModule,
