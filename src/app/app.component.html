@@ -1,61 +1,221 @@
-<!--
-<nav>
-  <ul>
-      <li style="display: inline;" class="mr-3" >
-          <a href="#"  style="color: brown; text-transform:uppercase;"> <b> MDB test</b> </a> 
-      </li>
-      <li style="display: inline" class="m-3">
-          <a  href="#" style="color: darkblue; text-transform:uppercase;"> <b> ts and js example </b> </a>
-      </li>
-      <li style="display: inline" class="m-3">
-          <a href="#" style="color: darkgreen; text-transform:uppercase; "> <b> ts test </b> </a>
-      </li>
-      <li style="display: inline" class="m-3">
-          <a href="#" style="color: darkgreen; text-transform:uppercase; "> <b> Deploy to GitHub </b> </a>
-      </li>
-  </ul>
-</nav>
--->
 
+<nav class="navbar 
+navbar-expand-lg 
+navbar-dark 
+primary-color
+">
+    <a class="navbar-brand" href="#">Navbar</a>
+    
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <ul class=" nav  navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link"
+                    routerLink="" 
+                    routerLinkActive="active"  
+                    [routerLinkActiveOptions]="{exact:true}"> 
+                    Home 
+                    <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" 
+                    routerLink="/example" 
+                    routerLinkActive="active">ts and js example
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" 
+              routerLink="/carousel"  
+                routerLinkActive="active">mdb test</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" 
+                    routerLink="/test"  
+                routerLinkActive="active">ts test</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" 
+                    routerLink="/deploy" 
+                    routerLinkActive="active">Deploy to GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="https://metanit.com/" target="_blank">metanit.com</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="https://mdbootstrap.com/" target="_blank">mdbootstrap.com</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+
+        <!-- Navbar brand -->
+        <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+      
+        <!-- Collapsible content -->
+        <links>
+      
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+            </li>
+      
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                Basic dropdown<span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+                <div class="divider dropdown-divider"></div>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+              </div>
+            </li>
+      
+          </ul>
+          <!-- Links -->
+      
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="twitter"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="google-plus"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <div class="btn-group" mdbDropdown>
+                  <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </links>
+        <!-- Collapsible content -->
+      
+      </mdb-navbar>
+      <!--/.Navbar-->
+<main>
+        <router-outlet></router-outlet>
+
+
+<!--
+    <div class="panel">
+            <div class="form-inline">
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <input class="form-control" [(ngModel)]="name" placeholder = "Модель" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-8">
+                        <button class="btn btn-default" (click)="addItem(name, price)">Добавить</button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Модель</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items">
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+-->
+<!--
+      <app-test></app-test>
+      <app-deploy></app-deploy>
+      <app-carousel></app-carousel>
+      <app-example></app-example>
+-->
+</main>
+
+<!--
+<div>
+<nav>
+    <ul class="nav">
+        <li style="display: inline;" class="mr-3" >
+            <a routerLink="" 
+            routerLinkActive="active"  
+            [routerLinkActiveOptions]="{exact:true}"> 
+            <b> Home</b> </a> 
+        </li>
+        <li style="display: inline" class="mr-3">
+                <a routerLink="/example" 
+                routerLinkActive="active"> 
+                <b> ts and js example </b> </a>
+            </li>
+            <li style="display: inline;" class="mr-3" >
+                <a routerLink="/carousel"  
+                routerLinkActive="active"> 
+                <b> mdb test</b> </a> 
+            </li>
+        <li style="display: inline" class="mr-3">
+            <a routerLink="/test" 
+            routerLinkActive="active"> 
+            <b> ts test </b> </a>
+        </li>
+        <li style="display: inline" class="mr-3">
+            <a routerLink="/deploy" 
+            routerLinkActive="active" > 
+            <b> Deploy to GitHub </b> </a>
+        </li>
+        <li style="display: inline" class="mr-3">
+            <a href="https://metanit.com/" target="_blank" > <b> metanit.com </b> </a>
+        </li>
+        <li style="display: inline" class="mr-3">
+                <a href="https://metanit.com/" target="_blank" > <b> metanit.com </b> </a>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+</nav>
+</div>
+-->  
+
+<!--
 
 <main>
-    <div class="panel">
-        <div class="form-inline">
-            <div class="form-group">
-                <div class="col-md-8">
-                    <input class="form-control" [(ngModel)]="name" placeholder = "Модель" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-6">
-                    <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-8">
-                    <button class="btn btn-default" (click)="addItem(name, price)">Добавить</button>
-                </div>
-            </div>
-        </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Модель</th>
-                    <th>Цена</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let item of items">
-                    <td>{{item.name}}</td>
-                    <td>{{item.price}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-  <!--
-  <app-test></app-test>
-  <app-deploy></app-deploy>
-  <app-carousel></app-carousel>
-  <app-example></app-example>
--->  
+   
 </main>
+-->  

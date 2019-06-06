@@ -12,6 +12,7 @@ export class AppComponent {
   name:string = 'myname';
   price:number = 44;
   items: Phone[] = [];
+  
   constructor(private dataService: DataService){}
 
   addItem(name: string, price: number){
