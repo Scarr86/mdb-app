@@ -10,8 +10,8 @@ import { Phone } from '../phone';
 export class CsstestComponent implements OnInit {
   rowdiv:number[] = [1,2,3];
   coldiv:number[] = [1,2,3,4];
-  name:string = 'myname';
-  price:number = 44;
+  name:string ;
+  price:number ;
   items: Phone[] = [];
   constructor(private dataService: DataService) { }
 
@@ -20,6 +20,9 @@ export class CsstestComponent implements OnInit {
   }
   addItem(name: string, price: number){
     this.dataService.addData(name, price);
+  }
+  delItem(){
+    this.dataService.delData();
   }
 
 }

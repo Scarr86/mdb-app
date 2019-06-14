@@ -18,4 +18,7 @@ export class DataService {
   addData(name:string, price: number){
     this.data.push(new Phone(name, price));
   }
+  delData(){
+    this.data.pop();
+  }
 }

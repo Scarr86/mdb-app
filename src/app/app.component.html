@@ -6,7 +6,7 @@
 
         <!-- Navbar brand -->
         <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
-      
+
         <!-- Collapsible content -->
         <links>
       
@@ -91,109 +91,18 @@
         </links>
         <!-- Collapsible content -->
       
-      </mdb-navbar>
+</mdb-navbar>
       <!--/.Navbar-->
-    </div>
   </div>
-
-<div class="row">
-  <div class="col">
-    <main>
-
-        <router-outlet></router-outlet>
-
-
-<!--
-    <div class="panel">
-            <div class="form-inline">
-                <div class="form-group">
-                    <div class="col-md-8">
-                        <input class="form-control" [(ngModel)]="name" placeholder = "Модель" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-6">
-                        <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-8">
-                        <button class="btn btn-default" (click)="addItem(name, price)">Добавить</button>
-                    </div>
-                </div>
-            </div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Модель</th>
-                        <th>Цена</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of items">
-                        <td>{{item.name}}</td>
-                        <td>{{item.price}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
--->
-<!--
-      <app-test></app-test>
-      <app-deploy></app-deploy>
-      <app-carousel></app-carousel>
-      <app-example></app-example>
--->
-</main>
 </div>
-</div>
-
-
-<!--
-<div>
-<nav>
-    <ul class="nav">
-        <li style="display: inline;" class="mr-3" >
-            <a routerLink="" 
-            routerLinkActive="active"  
-            [routerLinkActiveOptions]="{exact:true}"> 
-            <b> Home</b> </a> 
-        </li>
-        <li style="display: inline" class="mr-3">
-                <a routerLink="/example" 
-                routerLinkActive="active"> 
-                <b> ts and js example </b> </a>
-            </li>
-            <li style="display: inline;" class="mr-3" >
-                <a routerLink="/carousel"  
-                routerLinkActive="active"> 
-                <b> mdb test</b> </a> 
-            </li>
-        <li style="display: inline" class="mr-3">
-            <a routerLink="/test" 
-            routerLinkActive="active"> 
-            <b> ts test </b> </a>
-        </li>
-        <li style="display: inline" class="mr-3">
-            <a routerLink="/deploy" 
-            routerLinkActive="active" > 
-            <b> Deploy to GitHub </b> </a>
-        </li>
-        <li style="display: inline" class="mr-3">
-            <a href="https://metanit.com/" target="_blank" > <b> metanit.com </b> </a>
-        </li>
-        <li style="display: inline" class="mr-3">
-                <a href="https://metanit.com/" target="_blank" > <b> metanit.com </b> </a>
-        </li>
-    </ul>
-    <router-outlet></router-outlet>
-</nav>
-</div>
--->  
-
-<!--
 
 <main>
-   
+    <router-outlet></router-outlet>
 </main>
--->  
+
+<footer class="fixed" >
+  <p><a href="/license">Лицензионное соглашение</a> | 
+  <a href="/about">О сайте</a> | 
+  <a href="/donation">Donations</a></p>
+  <p><small>© Copyright 2016 MyCorp.</small></p>
+</footer>
